@@ -1,9 +1,9 @@
 
 @import url('./font.css');
 
-html,body{
-    margin:0%;
-    box-sizing:border-box;
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
     overflow-x: hidden;
 }
 
@@ -34,11 +34,39 @@ html,body{
     flex-wrap: wrap;
 }
 
-
 a{
     text-decoration: none;
     color: var(--text-gray);
 }
+
+h1{
+    /* font-family: var(--Lexend); */
+    font-size: 2.5rem;
+}
+
+h2{
+    font-family: var(--Lexend);
+}
+h3{
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+
+button.btn{
+    border:none;
+    border-radius: 2rem;
+    padding:1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor:pointer;
+}
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+
 
 .text-gray{
     color:var(--text-light)
@@ -56,18 +84,12 @@ a{
     min-height: 10vh;
     overflow: hidden;
     transition: height 1s   t;
+    flex-direction: column;
 }
 .nav .nav-menu{    
     justify-content: space-between;
+
 }
-
-
-.nav .nav-brand a {
-    font-size:1.6rem;
-    padding:1rem 0;
-    text-decoration: none;
-}
-
 
 .nav .toggle-collapse{
     position: absolute;
@@ -83,6 +105,25 @@ a{
     padding: 1.7rem 0;
 }
 
+
+.collapse{
+    height: 40rem;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size:1.4rem;
+    color:var(--text-gray)
+}
+
+.nav .nav-brand a {
+    font-size: 1.6rem;
+    padding:1rem 0;
+    text-decoration: none;
+    display: block;
+    font-family: var(--Lexend);
+}
+
+
 .nav-items{
     display:flex;
     margin:0;
@@ -95,6 +136,14 @@ a{
     font-family:  var(--Abel);
 }
 
+.nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+}
+
+
+.nav .nav-items .nav-link:hover a{
+    color:white;
+}
 
 .nav .social{
     padding: 1.4rem 0
@@ -108,17 +157,49 @@ a{
     color: #a1c4cf;
 }
 
-
-
 /* ---------------End  navbar ----------------- */
 
 
 /*------------------MainContent--------------------*/
 
 /*-----------------------SiteTitle------------------------*/
+main .site-title{
+    background: url('../assets/Background-image.png');
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .site-title .site-background{
+    padding-top:10rem;
+    text-align: center;
+    color: white
+}
+
+main .site-title h1,h3{
+    margin: .3rem;
+}
+
+main .site-title .btn{
+    margin:1.8rem;
+    background:var(--sky);
 
 
+}
 /*-----------------------EndSiteTitle------------------------*/
+
+
+/*--------------------------Carousel------------------------*/
+main .blog{
+    background: url('../assets/Abract01.png');
+    background-repeat:no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+}
+
+/*--------------------------EndCarousel------------------------*/
 
 /*------------------EndMainContent--------------------*/
 
@@ -131,7 +212,7 @@ a{
 /*              Viewport less then or equal to 750px            */
 
 @media only screen and (max-width: 750px){
-    .nav .nav-menu, .nav .nav-items{
+    .nav,.nav .nav-menu, .nav .nav-items{
         flex-direction: column;
     }
 
